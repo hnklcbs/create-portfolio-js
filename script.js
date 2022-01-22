@@ -14,3 +14,13 @@ function progressBar() {
 }
 
 window.addEventListener("scroll", progressBar);
+
+(function () {
+    var d = document,
+        s = document.createElement("script");
+
+    s.src = "https://hyunseolog.disqus.com/embed.js";
+
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+})();
