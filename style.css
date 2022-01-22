@@ -2,9 +2,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    line-height: 1.2;
     font-weight: 400;
     font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 a {
@@ -13,8 +14,28 @@ a {
 }
 
 :root {
-    --main-bg-color: #fbfafd;
-    --main-sub-color: #393939;
+    --main-bg-color: #f5f4eb;
+    --main-sub-color: #ad9490;
+    --main-head-color: #1d555d;
+    --main-nav-color: #c54444;
+}
+
+/* progressbar detail */
+
+.progress-container {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #e2ded4;
+    height: 6px;
+}
+
+.progress-bar {
+    height: 6px;
+    background: var(--main-nav-color);
+    width: 0%;
+    transition: all 0.1s ease;
 }
 
 /*header detail*/
@@ -40,19 +61,28 @@ header h1 {
 
 header h1 a {
     display: block;
+    color: var(--main-head-color);
     font-size: 24px;
     font-weight: 600;
     font-style: italic;
 }
 
 header h2 {
+    font-size: 14px;
     padding: 0 0 48px 0;
+}
+
+header .main {
+    border-bottom: 0.5px solid var(--main-sub-color);
 }
 
 header .main nav ul li {
     padding: 0 0 30px 0;
 }
 
+header .main nav ul li a {
+    color: var(--main-head-color);
+}
 header .main hr {
     margin: 6px 0;
 }
@@ -61,24 +91,147 @@ header .link {
     padding: 0 0 30px 0;
 }
 
-header .link nav {
-    padding: 10px 0;
-}
-
 header .link nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 0 12px 0;
 }
 
 header .link nav ul li a i {
     font-size: 27px;
-    color: var(--main-sub-color);
+    color: var(--main-head-color);
 }
 
 header .link p a {
+    color: var(--main-head-color);
     text-decoration: underline;
     line-height: 24px;
     font-weight: 300;
 }
+
 /*main detail*/
+
+main {
+    background-color: var(--main-bg-color);
+    margin: 0 0 0 248px;
+}
+
+main .mainimg {
+    width: 100%;
+    margin: -25% 0 0 0;
+}
+
+main article {
+    padding: 40px 120px;
+}
+
+main article h3 {
+    color: var(--main-head-color);
+    font-weight: 500;
+    font-size: 54px;
+    padding: 16px 0;
+}
+
+main article p {
+    text-align: justify;
+}
+
+main .about .stack {
+    width: 400px;
+    padding: 20px;
+    background-clip: content-box;
+    background-color: white;
+    border: 1px solid var(--main-sub-color);
+}
+
+main .about .stack p {
+    padding: 20px 30px;
+}
+
+main .about .stack .hcj {
+    width: 57%;
+    padding: 0 0 2% 4%;
+}
+
+main .about .stack .nodejs {
+    width: 27%;
+    padding: 2% 7% 1.5% 3.5%;
+}
+
+main .about .stack .python {
+    width: 40%;
+    padding: 0 3% 3% 7.5%;
+}
+
+main .about .stack .mongodb {
+    width: 40%;
+    padding: 0 6.5% 3.5% 1.5%;
+}
+
+span {
+    display: block;
+    padding: 25px 80px;
+}
+button::before,
+button::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: red;
+}
+
+span::before,
+span::after {
+    content: "";
+    width: 2px;
+    height: 0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: blue;
+}
+button:hover::before,
+button:hover::after {
+    width: 100%;
+}
+button:hover span::before,
+button:hover span::after {
+    height: 100%;
+}
+
+/*----- button 3 -----*/
+.btn-3::after {
+    left: 0;
+    bottom: 0;
+    transition-delay: 0.6s;
+}
+.btn-3 span::after {
+    transition-delay: 0.4s;
+    right: 0;
+    bottom: 0;
+}
+.btn-3::before {
+    right: 0;
+    top: 0;
+    transition-delay: 0.2s;
+}
+.btn-3 span::before {
+    transition-delay: 0s;
+    left: 0;
+    top: 0;
+}
+
+.btn-3:hover::after {
+    transition-delay: 0s;
+}
+.btn-3:hover span::after {
+    transition-delay: 0.2s;
+}
+.btn-3:hover::before {
+    transition-delay: 0.4s;
+}
+.btn-3:hover span::before {
+    transition-delay: 0.6s;
+}
