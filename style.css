@@ -12,6 +12,7 @@
     font-weight: 400;
     font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    overflow-x: hidden;
 }
 
 body {
@@ -53,7 +54,7 @@ header h1 a {
 }
 
 header h2 {
-    font-size: 14px;
+    font-size: 15px;
     padding: 0 0 48px 0;
 }
 
@@ -97,8 +98,7 @@ header .link p a {
 
 /*main detail*/
 
-main,
-footer {
+main {
     margin: 0 0 0 248px;
 }
 
@@ -108,7 +108,8 @@ main .mainimg {
 }
 
 main article {
-    padding: 20px 200px;
+    margin: 0 auto;
+    padding: 20px 80px;
 }
 
 main article h3 {
@@ -122,11 +123,12 @@ main article p {
     text-align: justify;
 }
 
-main .about {
+main #about {
     position: relative;
+    max-width: 900px;
 }
 
-main .about .stack {
+main #about .stack {
     width: 500px;
     padding: 20px;
     margin-left: -20px;
@@ -136,62 +138,128 @@ main .about .stack {
     float: left;
 }
 
-main .about .stack .hcj {
+main #about .stack .hcj {
     width: 57%;
     padding: 5% 0 2% 4.5%;
 }
 
-main .about .stack .nodejs {
+main #about .stack .nodejs {
     width: 27%;
     padding: 2% 8% 1.5% 2.5%;
 }
 
-main .about .stack .python {
+main #about .stack .python {
     width: 40%;
     padding: 0 3% 3% 8%;
 }
 
-main .about .stack .mongodb {
+main #about .stack .mongodb {
     width: 40%;
     padding: 0 6.5% 3.5% 1.5%;
 }
 
-main .about .stacktext {
-    margin: 0 0 0 536px;
+main #about .stacktext {
+    height: 100%;
     text-align: right;
     position: relative;
     right: 0;
     bottom: 0;
 }
 
-main .about .stacktext h4 {
+main #about .stacktext h4 {
     font-size: 36px;
     font-weight: 600;
-    padding: 20px 0 40px 0;
+    padding: 20px 0 48px 0;
 }
 
-main .about .stacktext .intro {
+main #about .stacktext .intro {
     font-size: 18px;
     line-height: 32px;
     font-weight: 500;
 }
 
-main .about .stacktext .career {
+main #about .stacktext .career {
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
-    padding-top: 10px;
+    padding-top: 8px;
 }
 
-main .campus {
-    clear: both;
+main #campus {
+    max-width: 100%;
+    padding: 20px 0 24px 0;
+}
+
+main #campus .campustext {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 80px;
+}
+
+main #campus .campustext h4 {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+main #campus .container {
+    display: grid;
+    grid-auto-columns: repeat(3, 1fr);
+    grid-auto-rows: repeat(2, 1fr);
+    justify-content: center;
+    gap: 16px 16px;
+    max-width: 100%;
+    background-color: #e2ded4;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+main #campus .container img {
+    border: solid 1px var(--main-sub-color);
+    padding: 4px;
+}
+
+main #campus .container .vlab {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+main #campus .container .vlab img {
+    height: 319px;
+}
+
+main #campus .container .dlab {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+main #campus .container .dlab img {
+    height: 478px;
+}
+
+main #campus .container .daehakro {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+main #campus .container .daehakro img {
+    height: 130px;
+}
+
+main #campus .container .cosmetic {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+main #campus .container .cosmetic img {
+    height: 130px;
 }
 
 /* footer detail */
 
 footer {
     color: var(--main-head-color);
-    padding: 20px 160px 20px 132px;
+    padding: 20px 20px 0;
     margin: 0 0 0 272px;
     text-align: right;
     border-top: solid 1px var(--main-sub-color);
@@ -199,4 +267,14 @@ footer {
 
 footer p {
     font-size: 14px;
+}
+
+@media (max-width: 1266px) {
+    main #about .stack {
+        float: none;
+    }
+
+    main #about .stacktext {
+        margin-top: -76px;
+    }
 }

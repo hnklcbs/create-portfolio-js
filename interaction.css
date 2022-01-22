@@ -5,7 +5,7 @@
     top: 0;
     z-index: 1;
     width: 100%;
-    background-color: #e2ded4;
+    background-color: #f3d8d8;
     height: 6px;
 }
 
@@ -18,12 +18,12 @@
 
 /* stack detail */
 
-main .about .stack span {
+main #about .stack span {
     display: block;
 }
 
-main .about .stack::before,
-main .about .stack::after {
+main #about .stack::before,
+main #about .stack::after {
     content: "";
     width: 0;
     height: 1px;
@@ -42,52 +42,52 @@ span::after {
     background: var(--main-sub-color);
 }
 
-main .about .stack:hover::before,
-main .about .stack:hover::after {
+main #about .stack:hover::before,
+main #about .stack:hover::after {
     width: 100%;
 }
 
-main .about .stack:hover span::before,
-main .about .stack:hover span::after {
+main #about .stack:hover span::before,
+main #about .stack:hover span::after {
     height: 100%;
 }
 
-main .about .stack::after {
+main #about .stack::after {
     left: 0;
     bottom: 0;
     transition-delay: 0.2s;
 }
 
-main .about .stack span::after {
+main #about .stack span::after {
     right: 0;
     bottom: 0;
     transition-delay: 0.1s;
 }
 
-main .about .stack::before {
+main #about .stack::before {
     right: 0;
     top: 0;
     transition-delay: 0s;
 }
 
-main .about .stack span::before {
+main #about .stack span::before {
     left: 0;
     top: 0;
     transition-delay: 0.3s;
 }
 
-main .about .stack:hover::after {
+main #about .stack:hover::after {
     transition-delay: 0.1s;
 }
 
-main .about .stack:hover span::after {
+main #about .stack:hover span::after {
     transition-delay: 0.2s;
 }
 
-main .about .stack:hover::before {
+main #about .stack:hover::before {
     transition-delay: 0.3s;
 }
 
-main .about .stack:hover span::before {
+main #about .stack:hover span::before {
     transition-delay: 0s;
 }
