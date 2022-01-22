@@ -167,7 +167,7 @@ main .about .stacktext {
 main .about .stacktext h4 {
     font-size: 36px;
     font-weight: 600;
-    padding: 20px 0;
+    padding: 20px 0 40px 0;
 }
 
 main .about .stacktext .intro {
@@ -180,6 +180,7 @@ main .about .stacktext .career {
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
+    padding-top: 10px;
 }
 
 main .campus {
