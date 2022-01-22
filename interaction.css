@@ -5,7 +5,7 @@
     top: 0;
     z-index: 1;
     width: 100%;
-    background-color: #f3d8d8;
+    background-color: #edc4c4;
     height: 6px;
 }
 
@@ -17,6 +17,18 @@
 }
 
 /* stack detail */
+
+main #about .stack {
+    padding: 19px;
+    border: 1px solid var(--main-sub-color);
+    transition-delay: 1s;
+}
+
+main #about .stack:hover {
+    padding: 20px;
+    border: none;
+    transition-delay: 0s;
+}
 
 main #about .stack span {
     display: block;
@@ -55,13 +67,13 @@ main #about .stack:hover span::after {
 main #about .stack::after {
     left: 0;
     bottom: 0;
-    transition-delay: 0.2s;
+    transition-delay: 0.3s;
 }
 
 main #about .stack span::after {
     right: 0;
     bottom: 0;
-    transition-delay: 0.1s;
+    transition-delay: 0.15s;
 }
 
 main #about .stack::before {
@@ -73,21 +85,48 @@ main #about .stack::before {
 main #about .stack span::before {
     left: 0;
     top: 0;
-    transition-delay: 0.3s;
+    transition-delay: 0.45s;
 }
 
 main #about .stack:hover::after {
-    transition-delay: 0.1s;
+    transition-delay: 0.15s;
 }
 
 main #about .stack:hover span::after {
-    transition-delay: 0.2s;
+    transition-delay: 0.3s;
 }
 
 main #about .stack:hover::before {
-    transition-delay: 0.3s;
+    transition-delay: 0.45s;
 }
 
 main #about .stack:hover span::before {
     transition-delay: 0s;
+}
+
+/* hand detail */
+
+main #about .stacktext .hand {
+    animation: shakeHand 1.5s infinite;
+}
+
+@keyframes shakeHand {
+    0% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(13deg);
+    }
+    48% {
+        transform: rotate(-13deg);
+    }
+    56% {
+        transform: rotate(13deg);
+    }
+    64% {
+        transform: rotate(-13deg);
+    }
+    72% {
+        transform: rotate(0deg);
+    }
 }

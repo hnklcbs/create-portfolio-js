@@ -36,13 +36,14 @@ header {
     background-color: var(--main-bg-color);
     padding: 0 24px;
     border-right: solid 1px var(--main-sub-color);
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 header h1 {
     width: 100%;
     height: 24px;
-    padding: 48px 0 6px 0;
+    padding: 48px 0 4px 0;
+    overflow: hidden;
 }
 
 header h1 a {
@@ -109,7 +110,7 @@ main .mainimg {
 
 main article {
     margin: 0 auto;
-    padding: 20px 80px;
+    padding: 20px 80px 0 80px;
 }
 
 main article h3 {
@@ -130,7 +131,6 @@ main #about {
 
 main #about .stack {
     width: 500px;
-    padding: 20px;
     margin-left: -20px;
     background-clip: content-box;
     background-color: white;
@@ -166,34 +166,43 @@ main #about .stacktext {
     bottom: 0;
 }
 
-main #about .stacktext h4 {
+main #about .stacktext h4,
+main #about .stacktext .hand {
     font-size: 36px;
     font-weight: 600;
-    padding: 20px 0 48px 0;
+    padding: 20px 0 26px 0;
+}
+
+main #about .stacktext .hand {
+    display: block;
+    float: right;
+    width: 36px;
+    margin: 0 2px 0 0;
 }
 
 main #about .stacktext .intro {
     font-size: 18px;
     line-height: 32px;
     font-weight: 500;
+    clear: both;
 }
 
 main #about .stacktext .career {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 20px;
     font-weight: 400;
-    padding-top: 8px;
+    padding-top: 26px;
 }
 
 main #campus {
     max-width: 100%;
-    padding: 20px 0 24px 0;
+    padding: 20px 0 0 0;
 }
 
 main #campus .campustext {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px 80px;
+    padding: 0px 80px 20px 80px;
 }
 
 main #campus .campustext h4 {
@@ -253,6 +262,14 @@ main #campus .container .cosmetic {
 
 main #campus .container .cosmetic img {
     height: 130px;
+}
+
+main #portfolio {
+    max-width: 900px;
+}
+
+main #contact {
+    max-width: 900px;
 }
 
 /* footer detail */
