@@ -1,3 +1,10 @@
+:root {
+    --main-bg-color: #f5f4eb;
+    --main-sub-color: #ad9490;
+    --main-head-color: #1d555d;
+    --main-nav-color: #c54444;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,34 +14,13 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+body {
+    background-color: var(--main-bg-color);
+}
+
 a {
     text-decoration: none;
     color: #191905;
-}
-
-:root {
-    --main-bg-color: #f5f4eb;
-    --main-sub-color: #ad9490;
-    --main-head-color: #1d555d;
-    --main-nav-color: #c54444;
-}
-
-/* progressbar detail */
-
-.progress-container {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    background-color: #e2ded4;
-    height: 6px;
-}
-
-.progress-bar {
-    height: 6px;
-    background: var(--main-nav-color);
-    width: 0%;
-    transition: all 0.1s ease;
 }
 
 /*header detail*/
@@ -111,8 +97,8 @@ header .link p a {
 
 /*main detail*/
 
-main {
-    background-color: var(--main-bg-color);
+main,
+footer {
     margin: 0 0 0 248px;
 }
 
@@ -122,7 +108,7 @@ main .mainimg {
 }
 
 main article {
-    padding: 20px 160px;
+    padding: 20px 200px;
 }
 
 main article h3 {
@@ -136,6 +122,10 @@ main article p {
     text-align: justify;
 }
 
+main .about {
+    position: relative;
+}
+
 main .about .stack {
     width: 500px;
     padding: 20px;
@@ -144,10 +134,6 @@ main .about .stack {
     background-color: white;
     position: relative;
     float: left;
-}
-
-main .about .stack p {
-    padding: 20px 30px;
 }
 
 main .about .stack .hcj {
@@ -170,11 +156,46 @@ main .about .stack .mongodb {
     padding: 0 6.5% 3.5% 1.5%;
 }
 
-main .about p {
-    padding: 20px 0 20px 536px;
+main .about .stacktext {
+    margin: 0 0 0 536px;
+    text-align: right;
     position: relative;
+    right: 0;
+    bottom: 0;
+}
+
+main .about .stacktext h4 {
+    font-size: 36px;
+    font-weight: 600;
+    padding: 20px 0;
+}
+
+main .about .stacktext .intro {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+main .about .stacktext .career {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
 }
 
 main .campus {
     clear: both;
+}
+
+/* footer detail */
+
+footer {
+    color: var(--main-head-color);
+    padding: 20px 160px 20px 132px;
+    margin: 0 0 0 272px;
+    text-align: right;
+    border-top: solid 1px var(--main-sub-color);
+}
+
+footer p {
+    font-size: 14px;
 }

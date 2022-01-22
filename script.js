@@ -16,6 +16,12 @@ function progressBar() {
 window.addEventListener("scroll", progressBar);
 
 (function () {
+    var disqus_config = function () {
+        this.page.url = "https://hnklcbs.github.io/create-portfolio-js/";
+        this.page.identifier = "hyunseolog";
+        this.page.title = "Hyunseo.log";
+    };
+
     var d = document,
         s = document.createElement("script");
 

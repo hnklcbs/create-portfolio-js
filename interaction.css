@@ -1,3 +1,23 @@
+/* progressbar detail */
+
+.progress-container {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #e2ded4;
+    height: 6px;
+}
+
+.progress-bar {
+    height: 6px;
+    background: var(--main-nav-color);
+    width: 0%;
+    transition: all 0.1s ease;
+}
+
+/* stack detail */
+
 main .about .stack span {
     display: block;
 }
