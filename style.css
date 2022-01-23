@@ -110,7 +110,7 @@ main .mainimg {
 
 main article {
     margin: 0 auto;
-    padding: 20px 80px 0 80px;
+    padding: 24px 80px 20px 80px;
 }
 
 main article h3 {
@@ -131,7 +131,6 @@ main #about {
 
 main #about .stack {
     width: 500px;
-    margin-left: -20px;
     background-clip: content-box;
     background-color: white;
     position: relative;
@@ -196,7 +195,7 @@ main #about .stacktext .career {
 
 main #campus {
     max-width: 100%;
-    padding: 20px 0 0 0;
+    padding: 24px 0 0 0;
 }
 
 main #campus .campustext {
@@ -226,6 +225,10 @@ main #campus .container {
 main #campus .container img {
     border: solid 1px var(--main-sub-color);
     padding: 4px;
+}
+
+main #campus .container div {
+    position: relative;
 }
 
 main #campus .container .vlab {
@@ -264,6 +267,33 @@ main #campus .container .cosmetic img {
     height: 130px;
 }
 
+main #campus .container .vlab .text,
+main #campus .container .dlab .text,
+main #campus .container .daehakro .text,
+main #campus .container .cosmetic .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #755b57;
+    opacity: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+main #campus .container .vlab .text:hover,
+main #campus .container .dlab .text:hover,
+main #campus .container .daehakro .text:hover,
+main #campus .container .cosmetic .text:hover {
+    opacity: 0.8;
+}
+
 main #portfolio {
     max-width: 900px;
 }
@@ -286,7 +316,7 @@ footer p {
     font-size: 14px;
 }
 
-@media (max-width: 1266px) {
+@media (max-width: 1301px) {
     main #about .stack {
         float: none;
     }
